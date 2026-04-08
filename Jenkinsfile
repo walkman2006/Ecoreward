@@ -10,7 +10,7 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                sh '''
+                bat '''
                 scp -o StrictHostKeyChecking=no -r * ubuntu@15.135.91.104:/var/www/html/
                 '''
             }
