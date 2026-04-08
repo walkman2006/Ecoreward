@@ -10,11 +10,9 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                sshagent(['ec2-key']) {
-                    bat '''
-                    scp -o StrictHostKeyChecking=no -r * ubuntu@15.135.91.104:/var/www/html/
-                    '''
-                }
+                bat '''
+                scp -i C:\\ProgramData\\Jenkins\\.jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.135.91.104:/var/www/html/
+                '''
             }
         }
     }
