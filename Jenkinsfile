@@ -11,9 +11,15 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 bat """
-                scp -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.134.35.54:/home/ubuntu/app/
+                scp -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.134.35.54:/var/www/html/
+                """
+            }
+        }
 
-                ssh -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem ubuntu@15.134.35.54 "sudo cp -r /home/ubuntu/app/* /var/www/html/"
+        stage('Restart Nginx') {
+            steps {
+                bat """
+                ssh -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem ubuntu@15.134.35.54 "sudo systemctl restart nginx"
                 """
             }
         }
