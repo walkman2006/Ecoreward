@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/walkman2006/Ecoreward.git'
+                git branch: 'main', url: 'https://github.com/walkman2006/Ecoreward.git'
             }
         }
 
