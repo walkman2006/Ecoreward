@@ -10,9 +10,9 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                bat '''
-                scp -i C:\\Users\\ttkis\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.134.35.54:/var/www/html/
-                '''
+                bat """
+                scp -i C:/Users/ttkis/.ssh/ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.134.35.54:/var/www/html/
+                """
             }
         }
     }
