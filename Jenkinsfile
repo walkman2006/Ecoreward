@@ -9,16 +9,16 @@ pipeline {
             }
         }
 
-        stage('Checkout') {
+        stage('Checkout Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/walkman2006/Ecoreward.git'
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy to EC2') {
             steps {
                 bat """
-                scp -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.134.35.54:/home/ubuntu/app/
+                scp -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.134.35.54:/var/www/html/
                 """
             }
         }
