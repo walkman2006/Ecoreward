@@ -10,9 +10,11 @@ pipeline {
 
         stage('Deploy to EC2') {
             steps {
-                bat '''
-                scp -o StrictHostKeyChecking=no -r * ubuntu@15.135.91.104:/var/www/html/
-                '''
+                sshagent(['ec2-key']) {
+                    bat '''
+                    scp -o StrictHostKeyChecking=no -r * ubuntu@15.135.91.104:/var/www/html/
+                    '''
+                }
             }
         }
     }
