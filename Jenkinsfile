@@ -15,13 +15,13 @@ pipeline {
             }
         }
 
-      stage('Deploy to EC2') {
-    steps {
-        bat """
-        rmdir /s /q node_modules 2>nul
-        scp -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@32.236.13.48:/var/www/html/
-        """
-    }
-}
+        stage('Deploy to EC2') {
+            steps {
+                sh """
+                rm -rf node_modules
+                scp -i /home/ubuntu/ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@32.236.13.48:/var/www/html/
+                """
+            }
+        }
     }
 }
