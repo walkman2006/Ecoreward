@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 bat """
-                scp -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@15.134.35.54:/var/www/html/
+                scp -i C:\\ProgramData\\Jenkins\\.ssh\\ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@32.236.13.48:/var/www/html/
                 """
             }
         }
