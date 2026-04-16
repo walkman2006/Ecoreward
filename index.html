@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoReward</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+  <nav class="navbar">
+    <h2 class="logo">EcoReward</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#product">Product</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#admin">Admin</a></li>
+    </ul>
+    <button class="btn">Get Started</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h1>Turn Waste............ into Rewards</h1>
+  <p>Smart waste management using QR, RFID, and NFC technology.</p>
+ <a href="#order" class="btn glow">Order Now</a>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="features">
+  <h2>Features edited</h2>
+  <div class="card-container">
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-front">♻️ Smart Waste Segregation</div>
+      <div class="card-back">Automatically separates waste using AI sensors.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-front">📡 QR / RFID / NFC Tracking</div>
+      <div class="card-back">Track user activity using smart scanning tech.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-front">💰 Reward Coins System</div>
+      <div class="card-back">Earn coins for proper waste disposal.</div>
+    </div>
+  </div>
+
+  <div class="card" onclick="this.classList.toggle('flipped')">
+    <div class="card-inner">
+      <div class="card-front">📊 User Dashboard</div>
+      <div class="card-back">View stats, rewards, and usage insights.</div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- PRODUCT -->
+<section id="product" class="product">
+  <h2>Smart Bin</h2>
+  <div class="product-box">
+    <div class="product-img">
+ <img src="bin-front.png" alt="Smart Bin">
+</div>
+    <div>
+      <p>AI-enabled smart bin for waste segregation</p>
+      <h3>₹999</h3>
+      <a href="#order" class="btn">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+  <h2>Pricing</h2>
+  <div class="pricing-container">
+    <div class="pricing-card">Basic – ₹999</div>
+    <div class="pricing-card highlight">Pro – ₹2999</div>
+    <div class="pricing-card">Campus – ₹9999</div>
+  </div>
+</section>
+<!-- ORDER NOW -->
+<section id="order" class="order">
+  <h2>Order Now</h2>
+
+  <form id="orderForm">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="text" name="address" placeholder="Address" required>
+  <textarea name="notes" placeholder="Additional Notes"></textarea>
+  <button type="submit">Place Order</button>
+</form>
+<p id="successMsg"></p>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="dashboard">
+  <h2>User Dashboard</h2>
+
+  <div class="dashboard-container">
+
+    <div class="dashboard-card">
+      <h3>🪙 Coins</h3>
+      <p class="value">120</p>
+      <span>Total eco rewards earned</span>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>📦 Submissions</h3>
+      <p class="value">25</p>
+      <span>Waste items submitted</span>
+    </div>
+
+    <div class="dashboard-card">
+      <h3>🎁 Rewards</h3>
+      <p class="value">5</p>
+      <span>Redeemed rewards</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ADMIN -->
+<section id="admin" class="admin">
+  <h2>Admin Panel</h2>
+
+  <div class="admin-container">
+
+    <div class="admin-card">
+      <h3>📦 Orders</h3>
+      <p class="value">0</p>
+      <span>Total orders placed</span>
+    </div>
+
+    <div class="admin-card">
+      <h3>👥 Users</h3>
+      <p class="value">0</p>
+      <span>Registered users</span>
+    </div>
+
+    <div class="admin-card">
+      <h3>💰 Revenue</h3>
+      <p class="value">₹0</p>
+      <span>Total earnings</span>
+    </div>
+
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 EcoReward | Contact: eco@reward.com</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
