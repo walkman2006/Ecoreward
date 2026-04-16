@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                 rm -rf node_modules
-                scp -i /var/lib/jenkins/ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@3.26.43.52:/var/www/html/
+                scp -i /var/lib/jenkins/ec2-key.pem -o StrictHostKeyChecking=no -r * ubuntu@3.26.104.131:/var/www/html/
                 '''
             }
         }
